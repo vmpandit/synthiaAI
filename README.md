@@ -1,129 +1,220 @@
 # Synthia 🎨
 
-**AI Marketing Intelligence that synthesizes legendary frameworks with your unique brand voice.**
+**AI marketing intelligence that synthesizes legendary frameworks with your unique brand voice.**
 
-Synthia is a sophisticated single-page web application that combines computer vision, brand strategy, and expert marketing frameworks to generate comprehensive content from images. Built with pure HTML/CSS/JavaScript and powered by Google's Gemini AI.
-
----
-
-## 🌟 Key Features
-
-### 🚀 NEW: Kanban Command Center (v3.4)
-The Campaign Tracker has been upgraded to a full Kanban workflow management system.
-- **Dual Views:** Switch seamlessly between **List View** (simple checklist) and **Kanban Board** (strategic workflow).
-- **Drag & Drop:** Move tasks between "To Do", "In Progress", and "Done" with intuitive drag-and-drop actions.
-- **Smart Migration:** Existing checklist data automatically migrates to the new Kanban status model.
-- **Persisted State:** Every move, note, and checkmark is saved instantly to your browser storage.
-
-### 🎯 Intelligent Brand Persona Generation
-- **Automated Research:** Synthia analyzes your website to understand your business
-- **Strategy Logic:** Differentiates between **Product** (4Ps) and **Service** (7Ps) businesses
-- **Client Mode:** Clarifies if you are marketing for yourself or a client
-- **Persistent Storage:** Personas saved locally for reuse across sessions
-
-### 📸 Image-to-Content Pipeline
-- **8 Expert Frameworks:** Each piece uses proven copywriting/storytelling methods
-- **Persona-Driven:** All content reflects your brand voice and positioning
-- **Visual Integration:** Your uploaded image is displayed with each content piece and embedded in PDF exports
-
-### 🎨 Content Types Generated
-
-1. **Campaign Tracker:** Interactive Kanban board & checklist.
-2. **Marketing Calendar:** 30-day integrated schedule optimizing posts/ads.
-3. **Story** (Robert McKee's 3-act structure)
-4. **Marketing Copy** (David Ogilvy's PAS framework)
-5. **Instagram Captions** (Gary Vee's engagement tactics)
-6. **Blog Post** (Neil Patel's Skyscraper method)
-7. **Google Ads** (Perry Marshall's 80/20 principle)
-8. **Podcast Script** (Joe Rogan style)
-9. **AEO Audit** (Answer Engine Optimization)
+Synthia is a single‑page, browser‑only application that combines computer vision, brand strategy, and proven marketing frameworks to turn any image into a complete, executable content ecosystem.
 
 ---
 
-## 🚀 Quick Start
+## 🌟 What Synthia Does
 
-### Prerequisites
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- Google Gemini API key ([Get one free](https://aistudio.google.com/app/apikey))
-- Your business website URL
+Synthia helps you go from **brand** → **image** → **strategy** → **content** → **execution** in one flow:
+
+1. Understands your brand and audience (Persona Engine).
+2. Analyzes an uploaded image using AI (Vision + Text).
+3. Generates a 30‑day marketing calendar around that image.
+4. Produces long‑form and channel‑specific content using expert frameworks.
+5. Provides a live **Campaign Command Center** with checklist + Kanban board to manage execution.
+6. Exports everything to PDFs with your image embedded.
+
+All of this runs locally in your browser with your own Gemini API key.
+
+---
+
+## 🎯 Core Features
+
+### 1. Brand Persona Engine
+
+- **Website Research:** Paste your website URL; Synthia uses Gemini to infer your positioning, audience, and offers.
+- **Clarifying Interview:**
+  - Asks whether you’re marketing a **Product** or a **Service**.
+  - Asks whether you’re doing this for **your own brand** or a **client** (agency mode).
+  - Asks follow‑ups to nail voice, offer, and audience.
+- **Strategic Frameworks:**
+  - Products lean on the **4 Ps** (Product, Price, Place, Promotion).
+  - Services lean on the **7 Ps** (People, Process, Physical Evidence, etc.).
+- **Persistent Persona:** The generated persona is stored in your browser and reused until you reset it.
+
+### 2. Image‑Driven Content Engine
+
+- **Image Upload:** Drag‑and‑drop or browse any image file (JPEG, PNG, etc., up to ~4 MB).
+- **Vision Context:** The image is encoded to base64 and sent to Gemini as inline data, so content is grounded in what’s actually visible.
+- **Visual Integration:**
+  - The image appears in the UI above each content tab (except persona/tracker).
+  - The same image is embedded in exported PDFs.
+
+### 3. Multi‑Framework Content Generation
+
+From one image + persona, Synthia generates multiple content artifacts:
+
+1. **Story**  
+   - 3‑act story structure (Robert McKee) and Hero’s Journey style narrative.
+   - Tuned for founders’ stories or brand origin stories.
+
+2. **Marketing Copy**  
+   - Headline formulas and body copy using PAS (Problem–Agitate–Solution) and classic Ogilvy/Halbert patterns.
+   - CTAs adapt:
+     - Services → “Book a Call”, “Schedule Consultation”.
+     - Products → “Buy Now”, “Shop the Look”.
+
+3. **Instagram / Social Captions**  
+   - “Jab, Jab, Jab, Right Hook” structure inspired by Gary Vee.
+   - Mix of story, value, question, behind‑the‑scenes, and direct offer posts.
+
+4. **SEO Blog Post**  
+   - Long‑form SEO‑oriented post (Skyscraper‑style) with headings, sections, and clear CTAs.
+
+5. **Google Ads Concepts**  
+   - High‑intent search ad ideas (headlines + descriptions).
+   - Service vs product emphasis (expertise vs price/features).
+
+6. **Podcast Script / Audio Outline**  
+   - Episode concept and talking points, with hooks and CTAs.
+   - Can be recorded verbatim or used as notes.
+
+7. **AEO (Answer Engine Optimization) Audit**  
+   - Recommendations to make your site more “answerable” by AI agents.
+   - Focus on structure, schema, FAQs, topical authority.
+
+All prompts inject the active persona and respect product vs service logic.
+
+### 4. Marketing Calendar (30‑Day Plan)
+
+- Generates a **4‑week plan** with:
+  - Day, channel, content type, topic/hook, and goal.
+  - Weekly themes: Awareness → Consideration → Trust → Conversion.
+- Service businesses emphasize:
+  - Weekday LinkedIn, webinars, case studies, and outreach.
+- Product businesses emphasize:
+  - Weekends/evenings, Reels/TikToks, promos, and display ads.
+- Output: Markdown table plus a narrative explanation.
+
+### 5. Campaign Command Center (Tracker + Kanban)
+
+This is where Synthia becomes an execution tool, not just a content generator.
+
+#### List View (Checklist)
+
+- Each row from the calendar becomes a **task**:
+  - Day, channel, type, topic, goal.
+- For each task you can:
+  - Tick a checkbox when done.
+  - Add free‑form notes (“Re‑shot reel”, “Client requested edits”, etc.).
+- Dashboard at top:
+  - Completion percentage.
+  - Tasks done vs total.
+  - Remaining count.
+
+#### Kanban Board View (Drag & Drop)
+
+- Switch between **List** and **Kanban** with a simple toggle.
+- Three status columns:
+  - **To Do**
+  - **In Progress**
+  - **Done**
+- Drag & drop cards between columns using the native HTML5 drag‑and‑drop API.
+- Status and completion state stay in sync with the checklist view.
+
+#### Persistence & Reset
+
+- **Auto‑Save:** Tasks, status (“todo/doing/done”), and notes are saved to `localStorage` as you go.
+- **Resume Later:** Close the browser and come back to see your board exactly as you left it.
+- **Reset:** One‑click reset of tracker state while keeping persona/API key intact.
+
+### 6. PDF Export (With Image)
+
+- Any tab’s content can be exported as a PDF:
+  - Header with title and date.
+  - Embedded image (for content tabs that use the image).
+  - Auto‑paginated text.
+- Tracker export:
+  - Exports a readable status report (TODO / IN PROGRESS / DONE with notes).
+
+---
+
+## 🧱 Architecture Overview
+
+- **Type:** Single‑Page Application (SPA).
+- **Stack:** HTML5 + CSS3 + vanilla JavaScript (ES6+).
+- **No Build Step:** Single `index.html` file plus assets.
+- **No Backend:** All logic runs client‑side in the user’s browser.
+- **AI Engine:** Google Gemini (2.0 Flash / 1.5, auto‑discovery of best model).
+- **Libraries:**
+  - `marked.js` – render Markdown to HTML.
+  - `jsPDF` – generate and download PDFs.
+  - Google Fonts (Inter) – for typography.
+
+---
+
+## 🔑 Setup & Usage
+
+### Requirements
+
+- Modern browser (Chrome, Edge, Firefox, Safari).
+- Gemini API key from Google AI Studio.
+- A website URL for persona generation.
+- One or more marketing images.
 
 ### Installation
 
-1. **Download the files:**
-   ```bash
-   # Download these files to the same folder:
-   # - index.html
-   # - synthia_icon_transparent.png
-   ```
+1. Place the files together:
+   - `index.html`
+   - `synthia_icon_transparent.png`
+2. Open `index.html` in your browser (double‑click or `open`/`start`/`xdg-open` from a terminal).
 
-2. **Open in browser:**
-   ```bash
-   # Double-click index.html or right-click → Open With → Browser
-   ```
+### Flow
 
-3. **Configure:**
-   - Enter your Gemini API key (stored locally)
-   - Add your website URL
-   - Click "Start Research"
+1. **Configure Brand**
+   - Paste your Gemini API key.
+   - Enter your website URL and optional client URLs.
+   - Generate persona and answer the clarifying questions.
 
----
+2. **Upload Image & Generate**
+   - Drag‑and‑drop an image.
+   - Click “Analyze & Generate Content”.
+   - Wait while Synthia:
+     - Builds your 30‑day calendar.
+     - Generates all content types.
+     - Populates the tracker and Kanban board.
 
-## 📚 How It Works
-
-### Phase 1: Persona Research
-```
-Your Website → AI Analysis → Strategy Interview → Final Persona
-```
-
-### Phase 2: Content Generation
-```
-Upload Image → AI Vision Analysis → Generate 30-Day Plan → Populate Kanban Board
-```
-
-### Phase 3: Execution & Tracking
-```
-Drag Tasks (To Do → Doing → Done) → Add Notes → Auto-Save Progress
-```
+3. **Manage Campaign**
+   - Use the **Tracker** tab:
+     - Check off tasks or drag cards across Kanban columns.
+     - Add notes as you execute.
+   - Export any view to PDF if needed.
 
 ---
 
 ## 🔐 Privacy & Security
 
-- **100% Local Processing:** Runs entirely in your browser
-- **No Server Required:** No data sent to third parties (except Google Gemini API)
-- **Local Storage Only:** API keys, personas, and **tracker progress** stored in browser localStorage
-- **No Tracking:** No analytics, no cookies, no telemetry
+- Runs entirely on the client; no Synthia‑side backend.
+- Only outbound network calls go to the official Gemini API endpoint.
+- API key and persona are stored in `localStorage` on your device.
+- No analytics, cookies, or third‑party trackers are included.
 
 ---
 
-## 🛠️ Technical Stack
+## 🛠️ Technical Summary
 
-- **Frontend:** Pure HTML5, CSS3 (Glassmorphism), Vanilla JavaScript
-- **Kanban Engine:** HTML5 Drag & Drop API (Native)
-- **AI Engine:** Google Gemini 2.0 Flash / 1.5 Pro
-- **Markdown:** marked.js
-- **PDF Export:** jsPDF 2.5.1
-- **Architecture:** SPA, no build tools
-
----
-
-## 🆕 Version History
-
-### v3.4 (February 2026) - Current
-- 📋 **Kanban Board:** Added Drag & Drop workflow management
-- 🔄 **Dual View:** Toggle between List and Board views
-- 💾 **Data Migration:** Auto-update of legacy tracker data
-
-### v3.3 (February 2026)
-- 🚀 **Campaign Tracker:** Interactive checklist feature
-- 💾 **State Persistence:** LocalStorage for tasks/notes
-- 🛠️ **Markdown Parser:** AI table to JS Object conversion
-
-### v3.2 (February 2026)
-- 📅 **Marketing Calendar:** Integrated 30-day schedule
-- 🧠 **Strategy Engine:** Product vs Service logic
-- 👥 **Agency Mode:** Client vs Owner voice detection
+- **UI Design:** Glassmorphism, responsive layout, mobile‑friendly Kanban.
+- **State:**
+  - In‑memory JS variables for active session.
+  - `localStorage` for persona, website, and tracker tasks.
+- **Networking:** `fetch` with JSON bodies to Gemini `generateContent`.
+- **Drag & Drop:** Native HTML Drag and Drop API for Kanban cards.
+- **Markdown Rendering:** `marked.parse(...)` into the content area.
+- **PDF:** `jsPDF` with `addImage` and `splitTextToSize`.
 
 ---
 
-**Synthia: Where brand synthesis meets marketing intelligence. Made with ❤️ for marketers, creators, and entrepreneurs.**
+## 🧾 Version History (High‑Level)
+
+- **v3.4:** Kanban board for campaign tasks; dual view (List + Board); drag‑and‑drop and migration of tracker data.
+- **v3.3:** Campaign tracker (checklist with progress and notes) and persistent tracker state.
+- **v3.2:** Marketing calendar generation with product vs service strategy logic and client vs owner mode.
+- **v3.1:** Image display in content tabs and image embedding in PDFs.
+- **v3.0 and earlier:** Core persona engine, multi‑framework content types, AEO audit, PDF export, responsive UI.
+
+---
+
+**Synthia: From image to executed campaign, in one glassy interface.**
